@@ -1,0 +1,30 @@
+$paletaColores:(
+    primario:rgb(245, 23, 160),
+    secundario: rgb(245, 86, 23),
+    negro: #000,
+    blanco: #fff,
+);
+// .gradiant{
+// 	background-image: linear-gradient(map-get($map: ($paletaColores, primario $key: $paletaColores,secundario);
+// }
+
+$familiaTipografica:(
+    encabezado: "PT Mono", "monospace",
+    subtitulos: "PT Serif", "serif",
+    parrafo: "PT Mono", "monospace",
+);
+.tipoLetra{
+
+    font-family: map-get(familiaTipografica,encabezado);
+    font-family: map-get(familiaTipografica,subtitulos);
+    font-family: map-get(familiaTipografica,parrafo);
+}
+
+@mixin estiloFuente($color,$fSize,$txtAling) {
+    color:$color;
+    font-size: $fSize;
+    text-align: $txtAling;
+}
+p{
+    @include estilofuente(black,20px,center);
+}
