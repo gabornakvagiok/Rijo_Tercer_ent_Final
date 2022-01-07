@@ -8,11 +8,7 @@ $paletaColores:(
 // 	background-image: linear-gradient(map-get($map: ($paletaColores, primario $key: $paletaColores,secundario);
 // }
 
-$familiaTipografica:(
-    encabezado: "PT Mono", "monospace",
-    subtitulos: "PT Serif", "serif",
-    parrafo: "PT Mono", "monospace",
-);
+
 .tipoLetra{
 
     font-family: map-get(familiaTipografica,encabezado);
@@ -28,3 +24,8 @@ $familiaTipografica:(
 p{
     @include estilofuente(black,20px,center);
 }
+$familiaTipografica:(
+    encabezado: "PT Mono" "monospace",
+    subtitulos: "PT Serif" "serif",
+    parrafo: "PT Mono" "monospace",
+);
